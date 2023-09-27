@@ -1,6 +1,12 @@
+/* CSS樣式，用於控制鋪克牌的顯示和半透明效果 */
+.card-container {
+      display: inline-grid;
+      gap: 3px;
+    }
+
 .card {
   width: 50px;
-  height: 75px;
+  height: 50px;
   background: white;
   border: 1px solid #000;
   display: inline-block;
@@ -14,7 +20,12 @@
   opacity: 0.5; /* 半透明效果 */
 }
 
+.red-text {
+      color: red;
+    }
+
 /* CSS樣式，用於隱藏第二個畫面 */
 #secondScreen {
   display: none;
 }
+
