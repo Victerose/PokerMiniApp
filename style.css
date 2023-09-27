@@ -1,4 +1,11 @@
 /* CSS樣式，用於控制鋪克牌的顯示和半透明效果 */
+.center-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px; /* 調整按鈕高度 */
+    }
+
 .card-container {
       display: inline-grid;
       gap: 3px;
