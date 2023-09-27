@@ -1,0 +1,20 @@
+.card {
+  width: 50px;
+  height: 75px;
+  background: white;
+  border: 1px solid #000;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.transparent {
+  opacity: 0.5; /* 半透明效果 */
+}
+
+/* CSS樣式，用於隱藏第二個畫面 */
+#secondScreen {
+  display: none;
+}

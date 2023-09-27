@@ -1,13 +1,35 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="utf-8"/>
-     <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
- </head>
- <body>
-     Hello World!
-     <script>
-         Telegram.WebApp.ready();
-     </script>
- </body>
- </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playing Cards App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- 首頁 -->
+  <div id="firstScreen">
+    <button onclick="showSecondScreen()">開始</button>
+  </div>
+
+  <!-- 第二個畫面 -->
+  <div id="secondScreen">
+    <h1 id="cardTitle">尚未出牌</h1>
+    <!-- 顯示13 * 4張撲克牌 -->
+    <div class="card" onclick="makeTransparent(this)">A <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">2 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">3 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">4 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">5 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">6 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">7 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">8 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">9 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">10 <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">J <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">Q <br> &#9824;</div>
+    <div class="card" onclick="makeTransparent(this)">K <br> &#9824;</div>
+    <!-- 重複上述的數字和花色以顯示所有牌 -->
+  </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
