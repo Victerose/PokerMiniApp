@@ -29,7 +29,8 @@ function updateCardCount() {
   });
 
   const cardTitle = document.getElementById('cardTitle');
-  cardTitle.innerHTML = `♠:${cardCount['黑桃']} <span class="red-text">♥:</span>${cardCount['紅心']} <span class="red-text">♦:</span>${cardCount['方塊']} ♣:${cardCount['梅花']} `;
+  // cardTitle.innerHTML = `♠:${cardCount['黑桃']} <span class="red-text">♥:</span>${cardCount['紅心']} <span class="red-text">♦:</span>${cardCount['方塊']} ♣:${cardCount['梅花']} `;
+  cardTitle.innerHTML = `${cardCount['黑桃']}♠, <span class="red-text">${cardCount['紅心']}♥, ${cardCount['方塊']}♦,</span> ${cardCount['梅花']}♣`;
 }
 
 // JavaScript函數，用於根據花色編碼獲取花色名稱
