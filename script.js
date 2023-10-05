@@ -2,6 +2,54 @@
 function showSecondScreen() {
   document.getElementById('firstScreen').style.display = 'none';
   document.getElementById('secondScreen').style.display = 'block';
+
+  // add <div class="card" onclick="makeTransparent(this)">A <br> ♠</div>
+  const cardnums = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"];
+
+  var container = document.createElement("div");
+  container.className = "card-container";
+  document.getElementById("secondScreen").appendChild(container);
+  for (let i in cardnums){
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = function(){makeTransparent(this);};
+    card.innerHTML = cardnums[i] + `<br>♠`;
+    container.appendChild(card);
+  }
+
+  container = document.createElement("div");
+  container.className = "card-container";
+  document.getElementById("secondScreen").appendChild(container);
+  for (let i in cardnums){
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = function(){makeTransparent(this);};
+    card.innerHTML = `<span class="red-text">${cardnums[i]}<br>♥</span>`;
+    container.appendChild(card);
+  }
+
+  container = document.createElement("div");
+  container.className = "card-container";
+  document.getElementById("secondScreen").appendChild(container);
+  for (let i in cardnums){
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = function(){makeTransparent(this);};
+    card.innerHTML = cardnums[i] + `<br>♦`;
+    container.appendChild(card);
+  }
+
+  container = document.createElement("div");
+  container.className = "card-container";
+  document.getElementById("secondScreen").appendChild(container);
+  for (let i in cardnums){
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = function(){makeTransparent(this);};
+    card.innerHTML = `<span class="red-text">${cardnums[i]}<br>♣</span>`;
+    container.appendChild(card);
+  }
+
 }
 
 // JavaScript函數，用於使卡片變為半透明

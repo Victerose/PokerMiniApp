@@ -20,7 +20,14 @@
     color: white;
 }
 
-.main-screen
+.main-screen {
+    background: var(--tg-theme-secondary-bg-color,#fff);
+}
+
+h1 {
+    color: var(--tg-theme-text-color, #000);
+    font-size: calc((100vw - 49px - 20px) / 10);
+}
 
 .card-container {
     /*display: inline-grid;
@@ -34,28 +41,27 @@
 .card {
   display: inline-block;
   /*playing cards are 2.5 inches by 3.5 inches, or 5:7*/
-  /*--base-width: calc((100% - 100px) / 35);*/
-  width: 45px;
-  height: 63px;
-  font-size: 20px;
+  width:  calc((100vw - 49px - 20px) / 7);
+  height: calc((100vw - 49px - 20px) / 5);
+  font-size: calc((100vw - 49px - 20px) / 14);
+  overflow: hidden;
   border-radius: 3px;
   font-weight: bold;
   margin: 3.5px 2.5px;
   text-align: center;
-  border: 1px solid var(--tg-theme-secondary-bg-color,#000);
+  border: 1px solid var(--tg-theme-text-color,#000);
   background: var(--tg-theme-bg-color, #fff);
   color: var(--tg-theme-text-color, #000);
 }
 
 .transparent {
-  opacity: 0.2; /* 半透明效果 */
+  opacity: 0.2;
 }
 
 .red-text {
-      color: red;
-    }
+  color: red;
+}
 
-/* CSS樣式，用於隱藏第二個畫面 */
 #secondScreen {
   display: none;
 }
