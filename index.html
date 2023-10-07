@@ -18,16 +18,46 @@
 
   <!-- 第二個畫面 -->
   <div id="secondScreen" class="main-screen">
+    <div id="openMenu">&#9776; Settings</div>
     <h1 id="cardTitle">Number of Cards Remain</h1>
-    <!--div class="card-container">
-      <div class="card" onclick="makeTransparent(this)">A <br> ♠</div>
-      <div class="card" onclick="makeTransparent(this)">2 <br> ♠</div>
-    </div-->
+    <div class="card-container">
+      <div class="card" onclick="makeTransparent(this)"><img src="imgs/CA.svg" width="100%"></div>
+    </div>
+  </div>
+
+  <div class="menu" id="menu">
+    <h1>Settings</h1>
+    <div class="submenu">
+      <label for="pokerDeck">Poker Deck:</label>
+      <select id="pokerDeck" onchange="changeDeck()">
+        <option value="52">Standard 52</option>
+        <option value="54">Standard 54</option>
+      </select>
+    </div>
+    <div class="submenu">
+      <label for="pokerAppearance">Poker Appearance:</label>
+      <select id="pokerAppearance" onchange="changeAppear()">
+        <option value="utf8">Simple</option>
+        <option value="wiki">Fancy</option>
+      </select>
+    </div>
   </div>
 
   <script>
     Telegram.WebApp.ready();
+    initstatus();
     showSecondScreen();
+
+    const menu = document.getElementById('menu');
+    const openMenu = document.getElementById('openMenu');
+
+    openMenu.addEventListener('click', () => {
+      if (menu.style.right === '0vw') {
+        menu.style.right = '-60vw';
+      } else {
+        menu.style.right = '0vw';
+      }
+    });
   </script>
 
 </body>

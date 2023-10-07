@@ -22,6 +22,7 @@
 
 .main-screen {
     background: var(--tg-theme-secondary-bg-color,#fff);
+    display: flex;
 }
 
 h1 {
@@ -30,12 +31,10 @@ h1 {
 }
 
 .card-container {
-    /*display: inline-grid;
-    gap: 10px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .card {
@@ -66,3 +65,24 @@ h1 {
   display: none;
 }
 
+.menu {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  width: 50vw;
+  height: 100%;
+  transition: right 0.5s ease;
+  padding: 20px;
+  background-color: var(--tg-theme-bg-color, #fff);
+  color: var(--tg-theme-text-color, #000);
+}
+
+.submenu {
+    font-size: 16px;
+    margin: 2ex 0;
+}
+
+#openMenu {
+  cursor: pointer;
+}
