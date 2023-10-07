@@ -3,15 +3,12 @@ function initstatus() {
   appear = "utf8";
 }
 
-
 function showSecondScreen() {
-  console.log(pockerDeck);
   document.getElementById('firstScreen').style.display = 'none';
   document.getElementById('secondScreen').style.display = 'block';
 
   var secondScreen = document.getElementById("secondScreen");
   var cardContainers = secondScreen.getElementsByClassName("card-container");
-  console.log(cardContainers);
   for (var i = cardContainers.length - 1; i >= 0; i--) {
     var cardContainer = cardContainers[i];
     secondScreen.removeChild(cardContainer);
@@ -63,7 +60,7 @@ function showSecondScreen() {
     const card = document.createElement("div");
     card.className = "card";
     card.onclick = function(){makeTransparent(this);};
-    card.innerHTML = i + `<br>♦`;
+    card.innerHTML = `<span class="red-text">${i}<br>♦</span>`;
     container.appendChild(card);
   }
 
@@ -74,7 +71,7 @@ function showSecondScreen() {
     const card = document.createElement("div");
     card.className = "card";
     card.onclick = function(){makeTransparent(this);};
-    card.innerHTML = `<span class="red-text">${i}<br>♣</span>`;
+    card.innerHTML = `${i}<br>♣`;
     container.appendChild(card);
   }
 

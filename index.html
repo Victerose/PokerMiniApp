@@ -35,7 +35,7 @@
       </select>
     </div>
     <div class="submenu">
-      <label for="pokerAppearance">Poker Appearance:</label>
+      <label for="pokerAppearance">Appearance:</label>
       <select id="pokerAppearance" onchange="changeAppear()">
         <option value="utf8">Simple</option>
         <option value="wiki">Fancy</option>
@@ -58,6 +58,12 @@
         menu.style.right = '0vw';
       }
     });
+
+    document.addEventListener('click', (event) => {
+      if (!openMenu.contains(event.target) && !menu.contains(event.target) && menu.style.right === '0vw') {
+        menu.style.right = '-60vw';
+      }
+    })
   </script>
 
 </body>
